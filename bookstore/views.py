@@ -6,6 +6,8 @@ from django.contrib.auth import authenticate, login, logout
 # Django Form for authentication
 from django.contrib.auth.forms import AuthenticationForm
 
+from django.http import HttpResponse
+
 
 # define a function view called login_view that takes a request from user
 def login_view(request):
@@ -49,3 +51,7 @@ def logout_view(request):
     return redirect(
         "login"
     )  # after logging out go to login form (or whichever page you want)
+
+
+def favicon_view(request):
+    return HttpResponse(status=204)
