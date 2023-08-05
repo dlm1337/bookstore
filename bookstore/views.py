@@ -51,7 +51,3 @@ def logout_view(request):
     return redirect(
         "login"
     )  # after logging out go to login form (or whichever page you want)
-
-
-def favicon_view(request):
-    return HttpResponse(status=204)
